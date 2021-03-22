@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A5311932607B22D00FD56AE /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5311922607B22D00FD56AE /* Order.swift */; };
+		8A5311932607B22D00FD56AE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5311922607B22D00FD56AE /* User.swift */; };
+		8A53119926081DAB00FD56AE /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A53119826081DAB00FD56AE /* TokenResponse.swift */; };
 		8ABCCE8E2606BB4400D42DCE /* OwnPodCenfotecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCCE8D2606BB4400D42DCE /* OwnPodCenfotecApp.swift */; };
 		8ABCCE902606BB4400D42DCE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCCE8F2606BB4400D42DCE /* ContentView.swift */; };
 		8ABCCE922606BB4700D42DCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ABCCE912606BB4700D42DCE /* Assets.xcassets */; };
@@ -16,7 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8A5311922607B22D00FD56AE /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		8A5311922607B22D00FD56AE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8A53119826081DAB00FD56AE /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
 		8ABCCE8A2606BB4400D42DCE /* OwnPodCenfotec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OwnPodCenfotec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ABCCE8D2606BB4400D42DCE /* OwnPodCenfotecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnPodCenfotecApp.swift; sourceTree = "<group>"; };
 		8ABCCE8F2606BB4400D42DCE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,7 +60,8 @@
 			children = (
 				8ABCCE8D2606BB4400D42DCE /* OwnPodCenfotecApp.swift */,
 				8ABCCE8F2606BB4400D42DCE /* ContentView.swift */,
-				8A5311922607B22D00FD56AE /* Order.swift */,
+				8A53119826081DAB00FD56AE /* TokenResponse.swift */,
+				8A5311922607B22D00FD56AE /* User.swift */,
 				8ABCCE9D2606BEBD00D42DCE /* Response.swift */,
 				8ABCCE912606BB4700D42DCE /* Assets.xcassets */,
 				8ABCCE962606BB4700D42DCE /* Info.plist */,
@@ -146,8 +149,9 @@
 			files = (
 				8ABCCE902606BB4400D42DCE /* ContentView.swift in Sources */,
 				8ABCCE9E2606BEBD00D42DCE /* Response.swift in Sources */,
-				8A5311932607B22D00FD56AE /* Order.swift in Sources */,
+				8A5311932607B22D00FD56AE /* User.swift in Sources */,
 				8ABCCE8E2606BB4400D42DCE /* OwnPodCenfotecApp.swift in Sources */,
+				8A53119926081DAB00FD56AE /* TokenResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

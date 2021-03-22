@@ -11,7 +11,7 @@ import SwiftUI
 struct OwnPodCenfotecApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(message: "https://images.dog.ceo/breeds/brabancon/n02112706_473.jpg")
+            ContentView(message: "https://images.dog.ceo/breeds/brabancon/n02112706_473.jpg", tokenText: "")
         }
     }
 }

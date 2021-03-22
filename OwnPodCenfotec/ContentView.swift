@@ -9,12 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var order = Order()
+    @ObservedObject var user = User()
+    @ObservedObject var tokenResponse = TokenResponse()
     
     @State var message: String
-    
-    @State private var confirmationMessage = ""
-    @State private var showingConfitmation = false
+    @State var tokenText: String
     
     var body: some View {
         VStack(alignment: .center, spacing: 50){
@@ -37,6 +36,8 @@ struct ContentView: View {
                 }, label: {
                     Text("Post Data")
                 })
+                Text("Token: \(tokenText)")
+                Text("*Ejemplo con datos de servidor quemados, los mismos se encuentran en User.swift, si se desea emular un login incorrecto que no retorna un token, se debe modificar el email.")
             }
         }
     }
@@ -64,11 +65,11 @@ struct ContentView: View {
     }
     
     func sendData(){
-        guard let encoded = try? JSONEncoder().encode(order) else {
+        guard let encoded = try? JSONEncoder().encode(user) else {
             print("Failed to encode data")
             return
         }
-        let url = URL(string: "https://reqres.in/api/cupcakes")!
+        let url = URL(string: "https://reqres.in/api/login")!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
@@ -78,11 +79,13 @@ struct ContentView: View {
                 print("No data in response: \(error?.localizedDescription ?? "Unknown error").")
                 return
             }
-            if let decodedOrder = try? JSONDecoder().decode(Order.self, from: data){
-                print("Nombre: \(decodedOrder.name)")
-                print("Cantidad: \(decodedOrder.quantity)")
+            if let decodedOrder = try? JSONDecoder().decode(TokenResponse.self, from: data){
+                print("Token: \(decodedOrder.token)")
+                self.tokenText = decodedOrder.token
+               // print("Error: \(decodedOrder.error)")                
             } else {
                 print("Invalid response from server")
+                self.tokenText = "Credenciales incorrectas"
             }
         }.resume()
     }
@@ -91,7 +94,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(message: "https://images.dog.ceo/breeds/brabancon/n02112706_473.jpg")
+        ContentView(message: "https://images.dog.ceo/breeds/brabancon/n02112706_473.jpg", tokenText: "")
     }
 }
 
